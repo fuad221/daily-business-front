@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {createContext} from 'react'
 const NotesContext = createContext({
     currentNote: null,
     notes: [
