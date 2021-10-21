@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", "sans-serif";
+}
+
+nav {
+    padding: 20px 10px;
+    color: whitesmoke;
+    background: rgb(224, 222, 99);
+}
+
+.note-form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+.note-form input {
+    padding: 3px 3px;
+    outline: none;
+  }
+
+  .note-form button {
+    margin-left: 10px;
+    color: white;
+    background: #007bff;
+    padding: 5px 10px;
+    border: none;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }

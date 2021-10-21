@@ -1,5 +1,6 @@
-import React, {createContext} from 'react'
-const NotesContext = createContext({
+import React from 'react'
+
+const NotesContext = React.createContext({
     currentNote: null,
     notes: [
         { id: 1, text: 'Do homework' },
