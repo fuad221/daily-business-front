@@ -9,7 +9,7 @@ body {
 nav {
     padding: 20px 10px;
     color: whitesmoke;
-    background: rgb(224, 222, 99);
+    background: rgb(11, 5, 97);
 }
 
 .note-form {
@@ -40,4 +40,36 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .note {
+    width: 20%;
+    margin: 10px;
+    padding: 13px;
+    border-radius: 5px;
+    border: solid lightgray 1px;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .btn-container button {
+    margin-right: 10px;
+  }
+
+  .edit {
+    color: white;
+    background: #007bff;
+    padding: 5px 10px;
+    border: none;
+  }
+
+
+  .delete {
+    color: white;
+    background: #dc3545;
+    padding: 5px 10px;
+    border: none;
   }
