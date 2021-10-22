@@ -1,5 +1,6 @@
 import React, { useContext, useReducer } from 'react'
-import Nav from './components/Nav'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import AddNote from './components/AddNote'
 import NoteList from './components/NoteList'
 import EditNote from './components/EditNote';
@@ -11,7 +12,8 @@ function App() {
   const [state, dispatch] = useReducer(notesReducer, initialState);
   return (
     <NotesContext.Provider value={{ state, dispatch }}>
-      <Nav />
+      <Header />
+     
       {state.currentNote === null ? (
         <div>
           <AddNote />
@@ -20,7 +22,9 @@ function App() {
       ) : (
         <EditNote />
       )}
-    </NotesContext.Provider>
+       <Footer />
+    </NotesContext.Provider> 
+   
   );
 }
 

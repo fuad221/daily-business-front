@@ -6,11 +6,17 @@ body {
     font-family: "Roboto", "sans-serif";
 }
 
-nav {
-    padding: 20px 10px;
-    color: whitesmoke;
-    background: rgb(11, 5, 97);
-}
+.header {
+  background: #f2c572;
+  padding: 20px;
+  box-shadow: 0 0 10px 2px #a5a5a5;
+ } 
+  .headrH {
+      font-size: 20px;
+      color: #684606;
+  }
+
+
 
 .note-form {
     display: flex;
