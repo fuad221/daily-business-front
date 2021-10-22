@@ -3,13 +3,12 @@ import Nav from './components/Nav'
 import AddNote from './components/AddNote'
 import NoteList from './components/NoteList'
 import EditNote from './components/EditNote';
-import NotesContext from './Context'
+import NotesContext from './context'
 import notesReducer from './Reducer'
 
 function App() {
-  const intialStat = useContext(NotesContext)
-  const [state, dispatch] = useReducer(notesReducer, intialStat)
-
+  const initialState = useContext(NotesContext);
+  const [state, dispatch] = useReducer(notesReducer, initialState);
   return (
     <NotesContext.Provider value={{ state, dispatch }}>
       <Nav />

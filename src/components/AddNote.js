@@ -1,5 +1,5 @@
 import React, { useState, useContext, useRef, useEffect } from 'react'
-import NotesContext from '../Context';
+import NotesContext from '../context';
 
 function AddNote() {
     const { dispatch } = useContext(NotesContext);
@@ -31,10 +31,8 @@ function AddNote() {
         <>
         <div className='note-form'>
             <form onSubmit={handleSubmit} action=''>
-                <form onSubmit={handleSubmit} action=''>
                     <input type='text' ref={ref} onChange={handleChange} value={value} />
                     <button>Add note</button>
-                </form>
             </form>
         </div>
         </>

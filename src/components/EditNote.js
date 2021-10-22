@@ -1,5 +1,5 @@
 import React, { useState, useContext, useRef, useEffect } from 'react';
-import NotesContext from '../Context';
+import NotesContext from '../context';
 
 function EditNote() {
   const { state, dispatch } = useContext(NotesContext);

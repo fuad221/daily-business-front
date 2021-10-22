@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import NotesContext from '../Context'
+import NotesContext from '../context'
 
 
 function Note({note}) {
