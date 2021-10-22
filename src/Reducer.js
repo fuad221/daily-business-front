@@ -33,7 +33,27 @@ function Reducer(state, action) {
             };
 
 
+        case 'UPDATE_NOTE':
+            const updatedNote = {
+                ...state.currentNote,
+                text: action.payload
+            };
 
+            const updatedNotesIndex = state.notes.findIndex(
+                note => note.id === state.currentNote.id
+            );
+
+            const updatedNotes = [
+                ...state.notes.slice(0, updatedNotesIndex),
+                updatedNote,
+                ...state.notes.slice(updatedNotesIndex + 1)
+            ];
+
+            return {
+                currentNote: null,
+                notes: updatedNotes
+            };
+            
         default:
             return state;
     }

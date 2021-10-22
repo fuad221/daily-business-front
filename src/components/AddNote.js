@@ -28,12 +28,16 @@ function AddNote() {
 
 
     return (
+        <>
         <div className='note-form'>
             <form onSubmit={handleSubmit} action=''>
-                <input type='text' ref={ref} onChange={handleChange} value={value} />
-                <button>Add Task</button>
+                <form onSubmit={handleSubmit} action=''>
+                    <input type='text' ref={ref} onChange={handleChange} value={value} />
+                    <button>Add note</button>
+                </form>
             </form>
         </div>
+        </>
     )
 }
 
