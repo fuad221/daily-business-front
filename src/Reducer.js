@@ -4,51 +4,51 @@ import { v4 as uuidv4 } from 'uuid';
 
 function Reducer(state, action) {
     switch (action.type) {
-        case 'ADD_NOTE':
-          const newNote = {
+        case 'ADD_TASK':
+          const newTask = {
             id: uuidv4(),
             text: action.payload
           };
     
-          const addedNotes = [...state.notes, newNote];
+          const addedTasks = [...state.tasks, newTask];
     
           return {
             ...state,
-            notes: addedNotes
+            tasks: addedTasks
           };
-        case 'DELETE_NOTE':
-          const deletedNotes = state.notes.filter(
-            note => note.id !== action.payload
+        case 'DELETE_TASK':
+          const deletedTasks = state.tasks.filter(
+            task => task.id !== action.payload
           );
     
           return {
             ...state,
-            notes: deletedNotes
+            tasks: deletedTasks
           };
-        case 'SET_CURRENT_NOTE':
+        case 'SET_CURRENT_TASK':
           return {
             ...state,
-            currentNote: action.payload
+            currentTask: action.payload
           };
-        case 'UPDATE_NOTE':
-          const updatedNote = {
-            ...state.currentNote,
+        case 'UPDATE_TASK':
+          const updatedTask = {
+            ...state.currentTask,
             text: action.payload
           };
     
-          const updatedNotesIndex = state.notes.findIndex(
-            note => note.id === state.currentNote.id
+          const updatedTasksIndex = state.tasks.findIndex(
+            task => task.id === state.currentTask.id
           );
     
-          const updatedNotes = [
-            ...state.notes.slice(0, updatedNotesIndex),
-            updatedNote,
-            ...state.notes.slice(updatedNotesIndex + 1)
+          const updatedTasks = [
+            ...state.tasks.slice(0, updatedTasksIndex),
+            updatedTask,
+            ...state.tasks.slice(updatedTasksIndex + 1)
           ];
     
           return {
-            currentNote: null,
-            notes: updatedNotes
+            currentTask: null,
+            tasks: updatedTasks
           };
         default:
           return state;

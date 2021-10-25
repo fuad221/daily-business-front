@@ -1,29 +1,30 @@
 import React, { useContext, useReducer } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header'
 import Footer from './components/Footer'
-import AddNote from './components/AddNote'
-import NoteList from './components/NoteList'
-import EditNote from './components/EditNote';
-import NotesContext from './context'
-import notesReducer from './Reducer'
+import AddTask from './components/AddTask'
+import TaskList from './components/TaskList'
+import EditTask from './components/EditTask';
+import TasksContext from './context'
+import TasksReducer from './Reducer'
 
 function App() {
-  const initialState = useContext(NotesContext);
-  const [state, dispatch] = useReducer(notesReducer, initialState);
+  const initialState = useContext(TasksContext);
+  const [state, dispatch] = useReducer(TasksReducer, initialState);
   return (
-    <NotesContext.Provider value={{ state, dispatch }}>
+    <TasksContext.Provider value={{ state, dispatch }}>
       <Header />
      
-      {state.currentNote === null ? (
+      {state.currentTask === null ? (
         <div>
-          <AddNote />
-          <NoteList />
+          <AddTask />
+          <TaskList />
         </div>
       ) : (
-        <EditNote />
+        <EditTask />
       )}
        <Footer />
-    </NotesContext.Provider> 
+    </TasksContext.Provider> 
    
   );
 }
