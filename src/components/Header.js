@@ -2,9 +2,9 @@ import React from 'react'
 
 function Header() {
     return (
-        <div>
-            <div className="headr">
-                <h1 className="headrH"> Daily bisiness </h1>
+        <div className="text-muted text-center py-2" style={{backgroundColor: "#f1c40f"}}>
+            <div >
+                <h1> Daily bisiness </h1>
             </div>
         </div>
     )

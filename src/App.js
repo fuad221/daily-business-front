@@ -12,20 +12,21 @@ function App() {
   const initialState = useContext(TasksContext);
   const [state, dispatch] = useReducer(TasksReducer, initialState);
   return (
-    <TasksContext.Provider value={{ state, dispatch }}>
-      <Header />
-     
-      {state.currentTask === null ? (
-        <div>
-          <AddTask />
-          <TaskList />
-        </div>
-      ) : (
-        <EditTask />
-      )}
-       <Footer />
-    </TasksContext.Provider> 
-   
+    <div>
+      <TasksContext.Provider value={{ state, dispatch }}>
+        <Header />
+
+        {state.currentTask === null ? (
+          <div>
+            <AddTask />
+            <TaskList />
+          </div>
+        ) : (
+          <EditTask />
+        )}
+      </TasksContext.Provider>
+      <Footer />
+    </div>
   );
 }
 

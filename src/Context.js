@@ -3,9 +3,9 @@ import React from 'react'
 const TasksContext = React.createContext({
     currentTask: null,
     tasks: [
-        { id: 1, text: 'Do homework' },
-        { id: 2, text: 'Take out trash' },
-        { id: 3, text: 'Clean room' }
+        { id: 1, text: 'Writing a completed work report' },
+        { id: 2, text: 'Send an email to the manager' },
+        { id: 3, text: 'Buy scooter from amazon' }
       ]
     });
     export default TasksContext;
