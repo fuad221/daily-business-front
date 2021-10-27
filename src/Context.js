@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {createContext} from 'react'
 
-const TasksContext = React.createContext({
+const TasksContext = createContext({
     currentTask: null,
     tasks: [
         { id: 1, text: 'Writing a completed work report' },
@@ -8,7 +8,6 @@ const TasksContext = React.createContext({
         { id: 3, text: 'Buy scooter from amazon' }
       ]
     });
+
     export default TasksContext;
-
-
 

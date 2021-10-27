@@ -5,7 +5,8 @@ import InputGroup from 'react-bootstrap/InputGroup'
 
 function EditTask() {
   const { state, dispatch } = useContext(TasksContext);
-  const [value, setValue] = useState(state.currentTask.text);
+  const [input, setInput] = useState(state.currentTask.text);
+  console.log(input);
 
   let ref = useRef();
 
@@ -14,38 +15,35 @@ function EditTask() {
   });
 
   const handleChange = e => {
-    setValue(e.target.value);
+    setInput(e.target.value);
   };
 
   const handleSubmit = e => {
     e.preventDefault();
-    if (value.trim() === '') {
+    if (input.trim() === '') {
       alert('Cannot add a blank task');
     } else {
-      dispatch({ type: 'UPDATE_TASK', payload: value });
-      setValue('');
+      dispatch({ type: 'UPDATE_TASK', payload: input });
+      setInput('');
     }
   };
 
 
   return (
-    <>
+    
       <Form onSubmit={handleSubmit} action='' className="align-content d-flex justify-content-center ">
         <Form.Group className="mb-3" >
 
           <InputGroup className="mb-3 ">
             <InputGroup.Text id="basic-addon1" className="bg-warning"
-              cols='30'
-              rows='10'
-            >
-
-              Task</InputGroup.Text>
+            >Task
+            </InputGroup.Text>
             <FormControl
               placeholder="write your task here"
               aria-label="Task"
               aria-describedby="basic-addon1"
               ref={ref}
-              value={value}
+              value={input}
               onChange={handleChange}
             />
           </InputGroup>
@@ -53,27 +51,6 @@ function EditTask() {
           <Button type="submit" >Update task</Button>
         </Form.Group>
       </Form>
-
-
-
-
-      {/* <div className='task-form'>
-        <form onSubmit={handleSubmit} action=''>
-          <textarea
-            ref={ref}
-            onChange={handleChange}
-            value={value}
-            name=''
-            id=''
-            cols='30'
-            rows='10'
-          />
-          <div style={{ textAlign: 'right' }}>
-            <button>Update task</button>
-          </div>
-        </form>
-      </div> */}
-    </>
   )
 }
 

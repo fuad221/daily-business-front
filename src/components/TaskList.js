@@ -4,11 +4,11 @@ import TasksContext  from '../context'
 
 function TaskList() {
     const { state } = useContext(TasksContext);
-
+    
     return (
         <div >
-        {state.tasks.map((task, i) => {
-          return <Task task={task} key={i} />;
+        {state.tasks.map((e, i) => {
+          return <Task myTask={e} key={i} />;
         })}
         </div>
     )

@@ -1,16 +1,11 @@
 import React, { useState, useContext, useRef, useEffect } from 'react'
 import { Button, Form, FormControl } from 'react-bootstrap';
 import InputGroup from 'react-bootstrap/InputGroup'
-
-
-
-
-
 import TasksContext from '../context';
 
 function AddTask() {
     const { dispatch } = useContext(TasksContext);
-    const [value, setValue] = useState("")
+    const [input, setInput] = useState("")
 
     let ref = useRef();
 
@@ -19,20 +14,19 @@ function AddTask() {
     });
 
     const handleChange = e => {
-        setValue(e.target.value);
-        console.log(value);
+        setInput(e.target.value);
+        console.log(input);
     }
 
     const handleSubmit = e => {
         e.preventDefault();
-        if (value.trim() === "") {
-            alert("can't add a black Task");
+        if (input.trim() === "") {
+            alert("you can't add a black Task");
         } else {
-            dispatch({ type: 'ADD_TASK', payload: value });
-            setValue("");
+            dispatch({ type: 'ADD_TASK', payload: input });
+            setInput("");
         }
     }
-
 
     return (
         <Form onSubmit={handleSubmit} action='' className="align-content d-flex justify-content-center ">
@@ -45,7 +39,7 @@ function AddTask() {
                         aria-label="Task"
                         aria-describedby="basic-addon1"
                         ref={ref}
-                        value={value}
+                        value={input}
                         onChange={handleChange}
                     />
                 </InputGroup>
