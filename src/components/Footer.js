@@ -1,7 +1,8 @@
+import './Footer.css'
 function Footer() {
     return (
 
-        <div className="d-flex justify-content-center mt-1 pt-2" style={{backgroundColor: "#f1c40f" }}>
+        <div className=" d-flex justify-content-center mt-1 pt-2 footer">
               <p> check the code on</p> 
            
                 <a
