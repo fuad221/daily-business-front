@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/daily-business-front/static/css/main.227afa87.chunk.css",
+    "main.js": "/daily-business-front/static/js/main.66376ed8.chunk.js",
+    "main.js.map": "/daily-business-front/static/js/main.66376ed8.chunk.js.map",
+    "runtime-main.js": "/daily-business-front/static/js/runtime-main.2d8dfa83.js",
+    "runtime-main.js.map": "/daily-business-front/static/js/runtime-main.2d8dfa83.js.map",
+    "static/css/2.0a9ec390.chunk.css": "/daily-business-front/static/css/2.0a9ec390.chunk.css",
+    "static/js/2.5d06c123.chunk.js": "/daily-business-front/static/js/2.5d06c123.chunk.js",
+    "static/js/2.5d06c123.chunk.js.map": "/daily-business-front/static/js/2.5d06c123.chunk.js.map",
+    "index.html": "/daily-business-front/index.html",
+    "static/css/2.0a9ec390.chunk.css.map": "/daily-business-front/static/css/2.0a9ec390.chunk.css.map",
+    "static/css/main.227afa87.chunk.css.map": "/daily-business-front/static/css/main.227afa87.chunk.css.map",
+    "static/js/2.5d06c123.chunk.js.LICENSE.txt": "/daily-business-front/static/js/2.5d06c123.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2d8dfa83.js",
+    "static/css/2.0a9ec390.chunk.css",
+    "static/js/2.5d06c123.chunk.js",
+    "static/css/main.227afa87.chunk.css",
+    "static/js/main.66376ed8.chunk.js"
+  ]
+}
