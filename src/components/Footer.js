@@ -12,7 +12,7 @@ function Footer() {
                     <i className="fab fa-github"></i>
                 </a>
         </div>
-    )
-}
+    );
+};
 
 export default Footer

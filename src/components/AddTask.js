@@ -1,6 +1,6 @@
-import React, { useState, useContext, useRef, useEffect } from 'react'
+import React, { useState, useContext, useRef, useEffect } from 'react';
 import { Button, Form, FormControl } from 'react-bootstrap';
-import InputGroup from 'react-bootstrap/InputGroup'
+import InputGroup from 'react-bootstrap/InputGroup';
 import TasksContext from '../context';
 
 function AddTask() {
@@ -47,7 +47,7 @@ function AddTask() {
                 <Button type="submit" >Add task</Button>
             </Form.Group>
         </Form>
-    )
-}
+    );
+};
 
-export default AddTask
+export default AddTask;

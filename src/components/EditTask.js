@@ -1,7 +1,7 @@
 import React, { useState, useContext, useRef, useEffect } from 'react';
 import TasksContext from '../context';
 import { Button, Form, FormControl } from 'react-bootstrap';
-import InputGroup from 'react-bootstrap/InputGroup'
+import InputGroup from 'react-bootstrap/InputGroup';
 
 function EditTask() {
   const { state, dispatch } = useContext(TasksContext);
@@ -54,4 +54,4 @@ function EditTask() {
   )
 }
 
-export default EditTask
+export default EditTask;

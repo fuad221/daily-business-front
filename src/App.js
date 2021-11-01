@@ -1,12 +1,12 @@
 import React, { useContext, useReducer } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header'
-import Footer from './components/Footer'
-import AddTask from './components/AddTask'
-import TaskList from './components/TaskList'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import AddTask from './components/AddTask';
+import TaskList from './components/TaskList';
 import EditTask from './components/EditTask';
-import TasksContext from './context'
-import TasksReducer from './Reducer'
+import TasksContext from './context';
+import TasksReducer from './Reducer';
 
 function App() {
   const initialState = useContext(TasksContext);
@@ -28,6 +28,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

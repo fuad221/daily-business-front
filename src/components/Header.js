@@ -7,7 +7,7 @@ function Header() {
                 <h1> Daily bisiness </h1>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Header

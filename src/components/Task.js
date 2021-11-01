@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
-import TasksContext from '../context'
-import './Task.css'
-import { Button} from 'react-bootstrap'
+import React, { useContext } from 'react';
+import TasksContext from '../context';
+import './Task.css';
+import { Button} from 'react-bootstrap';
 
 
 function Task({ myTask }) {
@@ -16,9 +16,9 @@ function Task({ myTask }) {
             </div>
 
         </div>
-    )
-}
+    );
+};
 
 
-export default Task
+export default Task;
 

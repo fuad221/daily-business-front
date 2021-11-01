@@ -53,7 +53,7 @@ function Reducer(state, action) {
       };
     default:
       return state;
-  }
-}
+  };
+};
 
-export default Reducer
+export default Reducer;
