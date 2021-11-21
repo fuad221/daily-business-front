@@ -1,4 +1,4 @@
-import './Footer.css'
+import { FooterCSS } from '../Reference-import'
 function Footer() {
     return (
 
